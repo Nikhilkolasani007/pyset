@@ -1,3 +1,210 @@
+# Python Study Guide for Exam Preparation
+
+## **1. Introduction**
+### **Python Overview**
+- Python is a high-level, interpreted programming language known for its simplicity and readability.
+- Used in web development, data science, automation, AI, and more.
+- Supports multiple programming paradigms (Procedural, Object-Oriented, Functional).
+
+### **Python Applications**
+- Web Development: Django, Flask
+- Data Science: Pandas, NumPy, Scikit-learn
+- Automation: Scripting, Selenium
+- Machine Learning & AI: TensorFlow, PyTorch
+- Cybersecurity: Ethical Hacking, Forensics
+
+## **2. Installation**
+### **Installing Python**
+1. Download from [python.org](https://www.python.org/downloads/)
+2. Install and check using:
+   ```bash
+   python --version
+   ```
+3. Install IDEs like PyCharm, VS Code, or Jupyter Notebook.
+
+## **3. Language Overview**
+### **Coding Practices**
+- Follow PEP 8 for styling.
+- Use meaningful variable names.
+- Keep functions small and modular.
+
+### **Hello World Program**
+```python
+print("Hello, World!")
+```
+
+### **Statements and Expressions**
+- Statements perform actions.
+- Expressions evaluate to values.
+
+### **Whitespace and Comments**
+```python
+# This is a comment
+print("Python uses indentation for blocks")
+```
+
+### **Using `print()`**
+```python
+print("This is a message")
+print("Value of x:", x)
+```
+
+### **Block and Scope**
+- Indentation defines blocks.
+- Variables inside functions have local scope.
+
+## **4. Types and Values**
+### **Overview**
+- Dynamic typing, no need to declare types explicitly.
+
+### **Common Data Types**
+```python
+string_var = "Hello"
+int_var = 10
+float_var = 10.5
+bool_var = True
+list_var = [1, 2, 3]
+tuple_var = (1, 2, 3)
+dict_var = {"name": "Python"}
+set_var = {1, 2, 3}
+```
+
+### **`type()` and `id()`**
+```python
+print(type(string_var))  # Returns type of variable
+print(id(string_var))    # Returns memory location
+```
+
+## **5. Operators**
+### **Arithmetic Operators**
+```python
+x = 10
+y = 3
+print(x + y, x - y, x * y, x / y, x % y, x ** y, x // y)
+```
+
+### **Bitwise Operators**
+```python
+print(x & y, x | y, x ^ y, ~x, x << 2, x >> 2)
+```
+
+### **Boolean Operators**
+```python
+print(True and False, True or False, not True)
+```
+
+### **Operator Precedence**
+1. `()`
+2. `**`
+3. `*`, `/`, `%`, `//`
+4. `+`, `-`
+5. `>`, `<`, `==`, `!=`
+
+## **6. Flow Control**
+### **Conditional Statements**
+```python
+x = 10
+if x > 5:
+    print("x is greater than 5")
+elif x == 5:
+    print("x is 5")
+else:
+    print("x is less than 5")
+```
+
+### **Loops**
+#### **While Loop**
+```python
+x = 0
+while x < 5:
+    print(x)
+    x += 1
+```
+
+#### **For Loop**
+```python
+for i in range(5):
+    print(i)
+```
+
+#### **Additional Controls**
+```python
+for i in range(10):
+    if i == 5:
+        break  # Exits loop
+    if i % 2 == 0:
+        continue  # Skips even numbers
+    print(i)
+```
+
+## **7. Structured Data**
+### **Lists**
+```python
+list1 = [1, 2, 3, 4, 5]
+list1.append(6)  # Adds element
+list1.remove(2)  # Removes element
+list1.sort()  # Sorts list
+list1.reverse()  # Reverses list
+print(list1)
+```
+
+### **Tuples**
+```python
+tuple1 = (1, 2, 3, 4, 5)
+print(tuple1[0])
+print(tuple1.count(2))  # Counts occurrences of an element
+```
+
+### **Dictionaries**
+```python
+dict1 = {"name": "Python", "version": 3.9}
+dict1["release"] = 1991  # Adds key-value pair
+print(dict1.keys())  # Prints all keys
+print(dict1.values())  # Prints all values
+```
+
+### **Sets**
+```python
+set1 = {1, 2, 3}
+set1.add(4)
+set1.remove(1)
+print(set1)
+```
+
+### **List Comprehension**
+```python
+squares = [x**2 for x in range(5)]
+print(squares)
+```
+
+## **8. Strings**
+### **String Operations**
+```python
+s = "Hello Python"
+print(s.upper())
+print(s.lower())
+print(s.replace("Python", "World"))
+print(s.split())
+print("-".join(["Hello", "World"]))
+```
+
+### **Escape Sequences**
+```python
+print("Hello\nWorld")  # Newline
+```
+
+### **Formatting Strings**
+```python
+name = "Python"
+age = 30
+print(f"{name} is {age} years old")
+```
+
+### **String Alignment**
+```python
+print("{:<10} {:^10} {:>10}".format("Left", "Center", "Right"))
+```
+
 # Python Basics - Practice Questions
 
 ## Set 1 - Fundamental Python Programs
