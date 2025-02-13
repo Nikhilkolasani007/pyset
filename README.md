@@ -135,7 +135,166 @@ for i in range(10):
     if i % 2 == 0:
         continue  # Skips even numbers
     print(i)
+
 ```
+
+Here are the **most important** and commonly used **list, tuple, dictionary, and set operations** in Python.  
+
+---
+
+## **1. List Operations (`list`)**  
+Mutable (can be changed), ordered, allows duplicates.  
+
+```python
+# Creation
+lst = [1, 2, 3, 4, 5]
+
+# Adding elements
+lst.append(6)         # [1, 2, 3, 4, 5, 6]
+lst.insert(2, 10)     # [1, 2, 10, 3, 4, 5, 6]
+lst.extend([7, 8])    # [1, 2, 10, 3, 4, 5, 6, 7, 8]
+
+# Removing elements
+lst.remove(10)        # Removes first occurrence of 10
+popped = lst.pop()    # Removes last element and returns it
+del lst[1]            # Deletes element at index 1
+
+# Accessing elements
+print(lst[0])         # First element
+print(lst[-1])        # Last element
+print(lst[1:4])       # Slicing [start:end]
+
+# Searching
+print(lst.index(3))   # Get index of first occurrence of 3
+print(4 in lst)       # True if 4 exists in the list
+
+# Sorting and reversing
+lst.sort()            # Sorts in ascending order
+lst.reverse()         # Reverses list
+
+# Copying
+lst_copy = lst.copy() # Creates a copy of the list
+
+# Length
+print(len(lst))       # Returns number of elements
+```
+
+---
+
+## **2. Tuple Operations (`tuple`)**  
+Immutable (cannot be changed), ordered, allows duplicates.  
+
+```python
+# Creation
+tpl = (1, 2, 3, 4, 5)
+
+# Accessing elements
+print(tpl[0])         # First element
+print(tpl[-1])        # Last element
+print(tpl[1:4])       # Slicing
+
+# Searching
+print(tpl.index(3))   # Get index of first occurrence of 3
+print(4 in tpl)       # True if 4 exists in the tuple
+
+# Counting elements
+print(tpl.count(2))   # Counts occurrences of 2
+
+# Length
+print(len(tpl))       # Returns number of elements
+
+# Tuple unpacking
+a, b, c, d, e = tpl   # Assign values to variables
+print(a, b, c)        # 1, 2, 3
+
+# Converting to list (since tuple is immutable)
+tpl_list = list(tpl)  # Convert tuple to list
+```
+
+---
+
+## **3. Dictionary Operations (`dict`)**  
+Key-value pairs, mutable, unordered (Python 3.6+ maintains insertion order).  
+
+```python
+# Creation
+dct = {"name": "Alice", "age": 25, "city": "New York"}
+
+# Accessing values
+print(dct["name"])        # Alice
+print(dct.get("age"))     # 25 (preferred, avoids errors)
+
+# Adding/updating values
+dct["age"] = 26           # Update value
+dct["gender"] = "Female"  # Add new key-value pair
+
+# Removing elements
+dct.pop("city")           # Removes and returns value
+del dct["age"]            # Deletes key
+dct.clear()               # Clears dictionary
+
+# Checking existence
+print("name" in dct)      # True if key exists
+
+# Getting keys, values, items
+print(dct.keys())         # dict_keys(['name', 'gender'])
+print(dct.values())       # dict_values(['Alice', 'Female'])
+print(dct.items())        # dict_items([('name', 'Alice'), ('gender', 'Female')])
+
+# Iterating through dictionary
+for key, value in dct.items():
+    print(key, value)
+
+# Copying
+dct_copy = dct.copy()
+
+# Length
+print(len(dct))           # Number of key-value pairs
+```
+
+---
+
+## **4. Set Operations (`set`)**  
+Unordered, mutable, **unique** elements (no duplicates).  
+
+```python
+# Creation
+st = {1, 2, 3, 4, 5}
+st2 = {4, 5, 6, 7}
+
+# Adding elements
+st.add(6)           # {1, 2, 3, 4, 5, 6}
+st.update([7, 8])   # {1, 2, 3, 4, 5, 6, 7, 8}
+
+# Removing elements
+st.remove(2)        # Removes 2, error if not found
+st.discard(3)       # Removes 3, no error if not found
+st.pop()            # Removes a random element
+st.clear()          # Clears set
+
+# Set operations
+union = st | st2            # Union (all elements)
+intersection = st & st2      # Intersection (common elements)
+difference = st - st2        # Difference (elements in st but not in st2)
+symmetric_diff = st ^ st2    # Symmetric difference (not in both)
+
+# Checking existence
+print(4 in st)       # True if 4 exists
+
+# Length
+print(len(st))       # Number of elements
+```
+
+---
+
+### **🔥 Summary (Most Used Operations)**
+| **Type**  | **Common Operations** |
+|-----------|----------------------|
+| **List**  | `append()`, `insert()`, `remove()`, `pop()`, `sort()`, `reverse()`, `index()`, `copy()` |
+| **Tuple** | `index()`, `count()`, `len()`, `unpacking`, `conversion to list` |
+| **Dictionary** | `get()`, `keys()`, `values()`, `items()`, `update()`, `pop()`, `copy()` |
+| **Set** | `add()`, `remove()`, `union()`, `intersection()`, `difference()`, `symmetric_difference()` |
+
 
 Here’s a **complete A to Z operations list** for **Lists, Tuples, Sets, Dictionaries, and Strings** in Python! 🚀  
 
